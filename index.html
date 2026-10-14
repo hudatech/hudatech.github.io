@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HuDaTech – Browser tools for everyday work</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta
+      name="description"
+      content="HuDaTech is an independent maker of browser tools. Our first product, Page to Prompt, is a Chrome extension that turns any web page into a ready-to-use AI prompt."
+    />
+    <style>
+      :root {
+        --bg: #eef2f7;
+        --ink: #14213d;
+        --muted: #4b5a75;
+        --line: #c9d3e3;
+        --accent: #2f4bd8;
+        --accent-ink: #fff;
+        --card: #fff;
+        --code: #14213d;
+        --code-ink: #e6ecfa;
+        --hl: #ffe27a;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0e1424;
+          --ink: #e6ecfa;
+          --muted: #9fb0cf;
+          --line: #26324f;
+          --accent: #7b93ff;
+          --accent-ink: #0e1424;
+          --card: #161f36;
+          --code: #0a0f1c;
+          --code-ink: #e6ecfa;
+          --hl: rgba(123, 147, 255, 0.4);
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font: 17px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      }
+      a {
+        color: var(--accent);
+      }
+      :focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 3px;
+      }
+      .wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      header {
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px 24px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+        text-decoration: none;
+      }
+      .brand img {
+        height: 36px;
+        width: auto;
+        display: block;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 4px 20px;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 15px;
+      }
+      nav a:hover {
+        color: var(--ink);
+      }
+      .hero {
+        padding: 56px 0 80px;
+      }
+      h1 {
+        font-size: clamp(34px, 5vw, 54px);
+        line-height: 1.08;
+        letter-spacing: -0.025em;
+        margin: 0 0 20px;
+        max-width: 16em;
+      }
+      .lead {
+        color: var(--muted);
+        font-size: 19px;
+        margin: 0 0 28px;
+        max-width: 34em;
+      }
+      .btn {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        display: inline-block;
+        padding: 13px 22px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 2px solid var(--accent);
+      }
+      .btn.primary {
+        background: var(--accent);
+        color: var(--accent-ink);
+      }
+      .btn.ghost {
+        color: var(--accent);
+        margin-left: 10px;
+      }
+      section {
+        padding: 56px 0;
+        border-top: 1px solid var(--line);
+      }
+      h2 {
+        font-size: 30px;
+        letter-spacing: -0.02em;
+        margin: 0 0 12px;
+      }
+      .sub {
+        color: var(--muted);
+        margin: 0 0 32px;
+        max-width: 36em;
+      }
+      .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 28px;
+        background: var(--card);
+      }
+      .product-head {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+      .product-head img {
+        height: 48px;
+        width: auto;
+        display: block;
+      }
+      .product h3 {
+        margin: 0;
+        font-size: 24px;
+        letter-spacing: -0.01em;
+      }
+      .product p {
+        margin: 0 0 22px;
+        color: var(--muted);
+      }
+      .price-note {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 14px 0 0;
+      }
+      .demo {
+        display: grid;
+        gap: 12px;
+      }
+      .demo-page {
+        margin: 0;
+        padding: 18px 20px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--bg);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      mark.sweep {
+        color: inherit;
+        background: linear-gradient(var(--hl), var(--hl)) no-repeat 0 100% / 0
+          100%;
+        border-radius: 3px;
+        animation: sweep 3.2s ease-in-out infinite alternate;
+      }
+      @keyframes sweep {
+        0%,
+        15% {
+          background-size: 0 100%;
+        }
+        70%,
+        100% {
+          background-size: 100% 100%;
+        }
+      }
+      .demo-join {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .demo-join::before,
+      .demo-join::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
+      .demo-prompt {
+        padding: 16px 20px;
+        border-radius: 10px;
+        background: var(--code);
+        color: var(--code-ink);
+        font-size: 15px;
+        line-height: 1.55;
+      }
+      .demo-prompt span {
+        display: block;
+        margin-bottom: 6px;
+      }
+      .demo-prompt code {
+        font: 13.5px/1.5 ui-monospace, Menlo, Consolas, monospace;
+        padding: 2px 8px;
+        border-radius: 6px;
+        background: rgba(123, 147, 255, 0.28);
+      }
+      .about p {
+        color: var(--muted);
+        max-width: 38em;
+        margin: 0 0 14px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 48px;
+        color: var(--muted);
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        justify-content: space-between;
+      }
+      footer a {
+        color: var(--muted);
+      }
+      @media (max-width: 760px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        nav {
+          justify-content: flex-start;
+        }
+        .product {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 28px;
+        }
+        .btn.ghost {
+          margin: 10px 0 0;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        mark.sweep {
+          animation: none;
+          background-size: 100% 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="brand" href="./"
+          ><img src="huda-logo.png" alt="" height="36" /><span
+            >HuDaTech</span
+          ></a
+        >
+        <nav>
+          <a href="#products">Products</a><a href="#about">About</a
+          ><a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="hero">
+          <h1>Small browser tools that save you a few clicks.</h1>
+          <p class="lead">
+            HuDaTech is an independent maker of browser extensions. We build
+            focused tools that connect the page you are reading to the work you
+            want to do next.
+          </p>
+          <a class="btn primary" href="page-to-prompt/">See Page to Prompt</a
+          ><a class="btn ghost" href="#about">About HuDaTech</a>
+        </div>
+
+        <section id="products">
+          <h2>Products</h2>
+          <p class="sub">What we are shipping right now.</p>
+          <div class="product">
+            <div>
+              <div class="product-head">
+                <img src="page-to-prompt/ptp-logo.png" alt="" height="48" />
+                <h3>Page to Prompt</h3>
+              </div>
+              <p>
+                A Chrome extension that sends highlighted text, page content,
+                the URL or the title to Claude, ChatGPT, Grok, Gemini,
+                Perplexity, Copilot or Qwen, using prompts you save yourself.
+              </p>
+              <a class="btn primary" href="page-to-prompt/">Learn more</a
+              ><a
+                class="btn ghost"
+                href="https://chromewebstore.google.com/detail/page-to-prompt/daohfbaahhchiihnfhonbhbbelfnkllm"
+                target="_blank"
+                rel="noopener"
+                >Add to Chrome</a
+              >
+              <p class="price-note">$5.99 per month. Cancel anytime.</p>
+            </div>
+            <div class="demo" aria-hidden="true">
+              <p class="demo-page">
+                Researchers say the new battery design keeps
+                <mark class="sweep"
+                  >most of its capacity after 2,000 charge cycles</mark
+                >, which is far longer than current cells.
+              </p>
+              <div class="demo-join">becomes</div>
+              <div class="demo-prompt">
+                <span>Explain this in simple terms:</span>
+                <code>{{SELECTED_TEXT}}</code>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="about">
+          <h2>About</h2>
+          <p>
+            HuDaTech is run by one person. Each product does one job, works
+            inside the browser you already use, and is priced as a simple
+            subscription.
+          </p>
+          <p>
+            Your pages and prompts stay in your browser. Read the
+            <a href="page-to-prompt/#privacy">privacy policy and terms</a> for
+            Page to Prompt.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p class="sub">
+            Questions, support or feedback? Write to us and we will reply by
+            email.
+          </p>
+          <a class="btn primary" href="mailto:hudatech.extensions@gmail.com"
+            >hudatech.extensions@gmail.com</a
+          >
+        </section>
+      </main>
+
+      <footer>
+        <span>© 2026 HuDaTech. All rights reserved.</span>
+        <span
+          ><a href="page-to-prompt/">Page to Prompt</a> ·
+          <a href="page-to-prompt/#privacy">Privacy &amp; Terms</a></span
+        >
+      </footer>
+    </div>
+  </body>
+</html>

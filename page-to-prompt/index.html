@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Page to Prompt – Turn any web page into a ready-to-use AI prompt
+    </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta
+      name="description"
+      content="Page to Prompt is a Chrome extension that sends highlighted text, page content, URL or title to Claude, ChatGPT, Grok, Gemini, Perplexity, Copilot or Qwen with your own saved prompts. $5.99 per month."
+    />
+    <style>
+      :root {
+        --bg: #eef2f7;
+        --ink: #14213d;
+        --muted: #4b5a75;
+        --line: #c9d3e3;
+        --accent: #2f4bd8;
+        --accent-ink: #fff;
+        --card: #fff;
+        --code: #14213d;
+        --code-ink: #e6ecfa;
+        --hl: #ffe27a;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0e1424;
+          --ink: #e6ecfa;
+          --muted: #9fb0cf;
+          --line: #26324f;
+          --accent: #7b93ff;
+          --accent-ink: #0e1424;
+          --card: #161f36;
+          --code: #0a0f1c;
+          --code-ink: #e6ecfa;
+          --hl: rgba(123, 147, 255, 0.4);
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font: 17px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      }
+      a {
+        color: var(--accent);
+      }
+      :focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 3px;
+      }
+      .wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      header {
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px 24px;
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+      }
+      .brand {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 10px;
+      }
+      .brand a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .brand a:hover {
+        color: var(--ink);
+      }
+      .brand a img {
+        height: 24px;
+        width: auto;
+        display: block;
+      }
+      .brand .sep {
+        color: var(--line);
+      }
+      .brand .product-logo {
+        height: 36px;
+        width: auto;
+        display: block;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 4px 20px;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 15px;
+      }
+      nav a:hover {
+        color: var(--ink);
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+        padding: 48px 0 72px;
+      }
+      h1 {
+        font-size: clamp(34px, 5vw, 54px);
+        line-height: 1.08;
+        letter-spacing: -0.025em;
+        margin: 0 0 20px;
+      }
+      .lead {
+        color: var(--muted);
+        font-size: 19px;
+        margin: 0 0 28px;
+        max-width: 34em;
+      }
+      .btn {
+        display: inline-block;
+        padding: 13px 22px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 2px solid var(--accent);
+      }
+      .btn.primary {
+        background: var(--accent);
+        color: var(--accent-ink);
+      }
+      .btn.ghost {
+        color: var(--accent);
+        margin-left: 10px;
+      }
+      .note {
+        font-size: 14px;
+        color: var(--muted);
+        margin-top: 14px;
+      }
+      .demo {
+        display: grid;
+        gap: 12px;
+      }
+      .demo-page {
+        margin: 0;
+        padding: 18px 20px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--card);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      mark.sweep {
+        color: inherit;
+        background: linear-gradient(var(--hl), var(--hl)) no-repeat 0 100% / 0
+          100%;
+        border-radius: 3px;
+        animation: sweep 3.2s ease-in-out infinite alternate;
+      }
+      @keyframes sweep {
+        0%,
+        15% {
+          background-size: 0 100%;
+        }
+        70%,
+        100% {
+          background-size: 100% 100%;
+        }
+      }
+      .demo-join {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .demo-join::before,
+      .demo-join::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
+      .demo-prompt {
+        padding: 16px 20px;
+        border-radius: 10px;
+        background: var(--code);
+        color: var(--code-ink);
+        font-size: 15px;
+        line-height: 1.55;
+      }
+      .demo-prompt span {
+        display: block;
+        margin-bottom: 6px;
+      }
+      .demo-prompt code {
+        font: 13.5px/1.5 ui-monospace, Menlo, Consolas, monospace;
+        padding: 2px 8px;
+        border-radius: 6px;
+        background: rgba(123, 147, 255, 0.28);
+      }
+      section {
+        padding: 56px 0;
+        border-top: 1px solid var(--line);
+      }
+      h2 {
+        font-size: 30px;
+        letter-spacing: -0.02em;
+        margin: 0 0 12px;
+      }
+      .sub {
+        color: var(--muted);
+        margin: 0 0 32px;
+        max-width: 36em;
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        counter-reset: s;
+      }
+      .steps li {
+        counter-increment: s;
+      }
+      .steps li::before {
+        content: counter(s);
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--accent);
+        color: var(--accent-ink);
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .steps h3 {
+        margin: 0 0 6px;
+        font-size: 18px;
+      }
+      .steps p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+      kbd {
+        font: 600 0.85em ui-monospace, Menlo, Consolas, monospace;
+        padding: 2px 7px;
+        border: 1px solid var(--line);
+        border-bottom-width: 2px;
+        border-radius: 6px;
+        background: var(--card);
+        white-space: nowrap;
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .feature {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 22px 24px;
+        background: var(--card);
+      }
+      .feature h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+      .ai-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0;
+        margin: 14px 0 0;
+        list-style: none;
+      }
+      .ai-list li {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 12px;
+        font-size: 14px;
+        color: var(--ink);
+      }
+      .video {
+        aspect-ratio: 16/9;
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--card);
+        display: grid;
+        place-items: center;
+        color: var(--muted);
+        text-align: center;
+        padding: 20px;
+      }
+      .video iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 12px;
+      }
+      .price {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+      .plan {
+        border: 2px solid var(--accent);
+        border-radius: 14px;
+        padding: 28px;
+        background: var(--card);
+      }
+      .plan .amt {
+        font-size: 46px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1;
+      }
+      .plan .amt small {
+        font-size: 17px;
+        font-weight: 500;
+        color: var(--muted);
+      }
+      .plan ul {
+        padding-left: 20px;
+        margin: 18px 0 22px;
+        color: var(--muted);
+      }
+      .plan .btn {
+        display: block;
+        text-align: center;
+      }
+      dl {
+        margin: 0;
+      }
+      dt {
+        font-weight: 600;
+        margin-top: 18px;
+      }
+      dd {
+        margin: 4px 0 0;
+        color: var(--muted);
+      }
+      .legal h3 {
+        margin: 28px 0 6px;
+        font-size: 19px;
+      }
+      .legal p,
+      .legal li {
+        color: var(--muted);
+        font-size: 16px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 48px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      @media (max-width: 760px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        nav {
+          justify-content: flex-start;
+        }
+        .hero,
+        .price {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        .steps,
+        .features {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        .btn.ghost {
+          margin: 10px 0 0;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        mark.sweep {
+          animation: none;
+          background-size: 100% 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <a href="../"
+            ><img src="../huda-logo.png" alt="" height="24" />HuDaTech</a
+          ><span class="sep" aria-hidden="true">/</span
+          ><img
+            class="product-logo"
+            src="ptp-logo.png"
+            alt=""
+            height="36"
+          />Page to Prompt
+        </div>
+        <nav>
+          <a href="#features">Features</a><a href="#how">How it works</a
+          ><a href="#demo">Demo</a><a href="#pricing">Pricing</a
+          ><a href="#privacy">Privacy &amp; Terms</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="hero">
+          <div>
+            <h1>Turn any web page into a ready-to-use AI prompt.</h1>
+            <p class="lead">
+              Page to Prompt is a Chrome extension that creates and manages your
+              prompts. Send highlighted text, the page content, its URL or its
+              title to Claude, ChatGPT, Grok, Gemini, Perplexity, Copilot or
+              Qwen in one click.
+            </p>
+            <a
+              class="btn primary"
+              href="https://chromewebstore.google.com/detail/page-to-prompt/daohfbaahhchiihnfhonbhbbelfnkllm"
+              target="_blank"
+              rel="noopener"
+              >Add to Chrome</a
+            ><a class="btn ghost" href="#demo">Watch the demo</a>
+            <p class="note">Available on the Chrome Web Store.</p>
+          </div>
+          <div class="demo" aria-hidden="true">
+            <p class="demo-page">
+              Researchers say the new battery design keeps
+              <mark class="sweep"
+                >most of its capacity after 2,000 charge cycles</mark
+              >, which is far longer than current cells.
+            </p>
+            <div class="demo-join">becomes</div>
+            <div class="demo-prompt">
+              <span>Explain this in simple terms:</span>
+              <code>{{SELECTED_TEXT}}</code>
+            </div>
+          </div>
+        </div>
+
+        <section id="features">
+          <h2>Features</h2>
+          <p class="sub">
+            Your prompts, your selection, your AI account, all connected from
+            any web page.
+          </p>
+          <div class="features">
+            <div class="feature">
+              <h3>Choose what to send</h3>
+              <p>
+                Pick Highlighted Text, Page Content, Page Url or Page Title as
+                the source for your prompt.
+              </p>
+            </div>
+            <div class="feature">
+              <h3>Seven AI assistants</h3>
+              <p>Open your prompt in the assistant you prefer.</p>
+              <ul class="ai-list">
+                <li>Claude</li>
+                <li>ChatGPT</li>
+                <li>Grok</li>
+                <li>Gemini</li>
+                <li>Perplexity</li>
+                <li>Copilot</li>
+                <li>Qwen</li>
+              </ul>
+            </div>
+            <div class="feature">
+              <h3>Your own prompt library</h3>
+              <p>
+                Save and manage prompts, and add <kbd>{{SELECTED_TEXT}}</kbd>
+                wherever the selected text should go. Edit a prompt before you
+                send it, or type a new one on the spot.
+              </p>
+            </div>
+            <div class="feature">
+              <h3>Conversations that continue</h3>
+              <p>
+                The extension remembers the AI tab it connected to, so the next
+                prompt continues the same conversation instead of starting a new
+                one. Use several AIs at once; each AI tab is remembered
+                separately.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="how">
+          <h2>How it works</h2>
+          <p class="sub">Four steps, no copy-and-paste cleanup.</p>
+          <ol class="steps">
+            <li>
+              <h3>Open the extension</h3>
+              <p>
+                Right-click and choose Page to Prompt, or press
+                <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>. You can change
+                the shortcut at <kbd>chrome://extensions/shortcuts</kbd>.
+              </p>
+            </li>
+            <li>
+              <h3>Choose a source and an AI</h3>
+              <p>
+                Select Highlighted Text, Page Content, Page Url or Page Title,
+                then pick Claude, ChatGPT, Grok, Gemini, Perplexity, Copilot or
+                Qwen.
+              </p>
+            </li>
+            <li>
+              <h3>Pick a prompt</h3>
+              <p>
+                Click a saved prompt to open the AI right away. Click the edit
+                button next to it to load it into the input box and adjust it
+                first, or write a new prompt there.
+              </p>
+            </li>
+            <li>
+              <h3>Keep the conversation going</h3>
+              <p>
+                Choose another prompt later and it continues in the same AI tab
+                you already opened.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section id="demo">
+          <h2>Demo</h2>
+          <p class="sub">
+            A short video of the extension running on a real page.
+          </p>
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/ICcX1ZXY1Yw"
+              title="Page to Prompt demo"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+
+        <section id="pricing">
+          <h2>Pricing</h2>
+          <p class="sub">
+            One simple plan. Payments are handled securely by Lemon Squeezy.
+          </p>
+          <div class="price">
+            <div class="plan">
+              <div class="amt">$5.99 <small>/ month</small></div>
+              <ul>
+                <li>Unlimited page-to-prompt conversions</li>
+                <li>Works on any public web page</li>
+                <li>All future updates included</li>
+                <li>Cancel anytime</li>
+              </ul>
+              <a
+                class="btn primary"
+                href="https://hudatech.lemonsqueezy.com/checkout/buy/b155e759-7594-4499-b817-72c593e1abed"
+                target="_blank"
+                rel="noopener"
+                >Subscribe</a
+              >
+            </div>
+            <dl>
+              <dt>What do I get after paying?</dt>
+              <dd>
+                A license key by email. Enter it in the extension to unlock it.
+              </dd>
+              <dt>Do I need an AI account?</dt>
+              <dd>
+                Yes. Claude, ChatGPT, Grok, Gemini, Perplexity, Copilot and Qwen
+                run in your own web account, and the extension is not affiliated
+                with them. Page to Prompt only connects the page you are viewing
+                to the AI.
+              </dd>
+              <dt>Is this a service?</dt>
+              <dd>
+                No. Page to Prompt is a digital software product sold as a
+                subscription license.
+              </dd>
+              <dt>How do I cancel?</dt>
+              <dd>
+                Use the link in your Lemon Squeezy receipt email, or contact us.
+              </dd>
+            </dl>
+          </div>
+        </section>
+
+        <section id="privacy" class="legal">
+          <h2>Privacy &amp; Terms</h2>
+          <h3>Privacy</h3>
+          <p>
+            Page to Prompt reads the page you are viewing only when you use the
+            extension. Your selected text, page content, URL or title is
+            processed in your browser and placed in the AI site you choose,
+            which you access with your own account and which has its own privacy
+            policy. We do not sell your data and do not store the pages you
+            convert. Payment and billing details are handled by Lemon Squeezy;
+            we never see your card number.
+          </p>
+          <h3>Terms</h3>
+          <ul>
+            <li>Your subscription renews monthly at $5.99 until you cancel.</li>
+            <li>
+              You are responsible for following the terms of the websites and AI
+              tools you use with the extension. Those AI services are separate
+              from Page to Prompt and are not provided by us.
+            </li>
+            <li>
+              The software is provided as is. Refund requests are handled
+              according to the policy shown at checkout.
+            </li>
+          </ul>
+          <h3>Contact</h3>
+          <p>
+            <a href="mailto:hudatech.extensions@gmail.com"
+              >hudatech.extensions@gmail.com</a
+            >
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        © 2026 <a href="../">HuDaTech</a>. Page to Prompt is a product of
+        HuDaTech. All rights reserved.
+      </footer>
+    </div>
+  </body>
+</html>
