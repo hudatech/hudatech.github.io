@@ -261,6 +261,20 @@
       footer a {
         color: var(--muted);
       }
+      .badges {
+        flex-basis: 100%;
+      }
+      .badges a {
+        display: inline-block;
+        text-decoration: none;
+      }
+      .badges img {
+        display: block;
+        width: 260px;
+        max-width: 100%;
+        height: auto;
+        border: 0;
+      }
       @media (max-width: 760px) {
         header {
           flex-direction: column;
@@ -386,6 +400,23 @@
           ><a href="page-to-prompt/">Page to Prompt</a> ·
           <a href="page-to-prompt/#privacy">Privacy &amp; Terms</a></span
         >
+        <div class="badges">
+          <a href="https://dang.ai" target="_blank" rel="noopener">
+            <picture>
+              <source
+                srcset="https://assets.dang.ai/badges/dang-verified-dark.png"
+                media="(prefers-color-scheme: dark)"
+              />
+              <img
+                src="https://assets.dang.ai/badges/dang-verified-light.png"
+                alt="Verified on DANG!"
+                width="260"
+                height="94"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
       </footer>
     </div>
   </body>
