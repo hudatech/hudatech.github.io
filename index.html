@@ -263,6 +263,10 @@
       }
       .badges {
         flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px 24px;
       }
       .badges a {
         display: inline-block;
@@ -274,6 +278,9 @@
         max-width: 100%;
         height: auto;
         border: 0;
+      }
+      .badges .badge-fazier img {
+        width: 160px;
       }
       @media (max-width: 760px) {
         header {
@@ -412,6 +419,27 @@
                 alt="Verified on DANG!"
                 width="260"
                 height="94"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+          <a
+            class="badge-fazier"
+            href="https://fazier.com/launches/hudatech.store"
+            target="_blank"
+            rel="noopener"
+          >
+            <picture>
+              <source
+                srcset="
+                  https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=dark
+                "
+                media="(prefers-color-scheme: dark)"
+              />
+              <img
+                src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light"
+                alt="Launched on Fazier"
+                width="160"
                 loading="lazy"
               />
             </picture>
