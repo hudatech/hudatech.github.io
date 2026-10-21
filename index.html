@@ -282,6 +282,9 @@
       .badges .badge-fazier img {
         width: 160px;
       }
+      .badges .badge-smol img {
+        width: 250px;
+      }
       @media (max-width: 760px) {
         header {
           flex-direction: column;
@@ -440,6 +443,26 @@
                 src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light"
                 alt="Launched on Fazier"
                 width="160"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+          <a
+            class="badge-smol"
+            href="https://smollaunch.com"
+            target="_blank"
+            rel="noopener"
+          >
+            <picture>
+              <source
+                srcset="https://smollaunch.com/badges/featured-dark.svg"
+                media="(prefers-color-scheme: dark)"
+              />
+              <img
+                src="https://smollaunch.com/badges/featured.svg"
+                alt="Page to Prompt — Featured on Smol Launch"
+                width="250"
+                height="60"
                 loading="lazy"
               />
             </picture>
