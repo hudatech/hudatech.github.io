@@ -390,6 +390,24 @@
         color: var(--muted);
         font-size: 14px;
       }
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px 24px;
+        margin-top: 20px;
+      }
+      .badges a {
+        display: inline-block;
+        text-decoration: none;
+      }
+      .badges img {
+        display: block;
+        width: 250px;
+        max-width: 100%;
+        height: auto;
+        border: 0;
+      }
       @media (max-width: 760px) {
         header {
           flex-direction: column;
@@ -659,6 +677,28 @@
       <footer>
         © 2026 <a href="../">HuDaTech</a>. Page to Prompt is a product of
         HuDaTech. All rights reserved.
+        <div class="badges">
+          <a
+            class="badge-smol"
+            href="https://smollaunch.com"
+            target="_blank"
+            rel="noopener"
+          >
+            <picture>
+              <source
+                srcset="https://smollaunch.com/badges/featured-dark.svg"
+                media="(prefers-color-scheme: dark)"
+              />
+              <img
+                src="https://smollaunch.com/badges/featured.svg"
+                alt="Page to Prompt — Featured on Smol Launch"
+                width="250"
+                height="60"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
       </footer>
     </div>
   </body>
