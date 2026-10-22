@@ -391,28 +391,77 @@
         font-size: 14px;
       }
       .badges {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 16px 24px;
         margin-top: 20px;
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent,
+          #000 6%,
+          #000 94%,
+          transparent
+        );
+        mask-image: linear-gradient(
+          to right,
+          transparent,
+          #000 6%,
+          #000 94%,
+          transparent
+        );
+      }
+      .badges-track {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: max-content;
+      }
+      .badges.is-marquee .badges-track {
+        animation: badges-scroll var(--badges-duration, 30s) linear infinite;
+      }
+      .badges.is-marquee:hover .badges-track,
+      .badges.is-marquee:focus-within .badges-track {
+        animation-play-state: paused;
+      }
+      @keyframes badges-scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
       }
       .badges a {
         display: inline-block;
+        flex: 0 0 auto;
+        margin-right: 24px;
         text-decoration: none;
       }
       .badges img {
         display: block;
         width: 250px;
-        max-width: 100%;
+        max-width: none;
         height: auto;
         border: 0;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .badges {
+          overflow-x: auto;
+          scrollbar-width: none;
+        }
+        .badges::-webkit-scrollbar {
+          display: none;
+        }
+        .badges.is-marquee .badges-track {
+          animation: none;
+        }
       }
       .badges .badge-fazier img {
         width: 160px;
       }
       .badges .badge-smol img {
         width: 250px;
+      }
+      .badges .badge-nick img {
+        width: 244px;
       }
       @media (max-width: 760px) {
         header {
@@ -684,64 +733,137 @@
         © 2026 <a href="../">HuDaTech</a>. Page to Prompt is a product of
         HuDaTech. All rights reserved.
         <div class="badges">
-          <a href="https://dang.ai" target="_blank" rel="noopener">
-            <picture>
-              <source
-                srcset="https://assets.dang.ai/badges/dang-verified-dark.png"
-                media="(prefers-color-scheme: dark)"
-              />
-              <img
-                src="https://assets.dang.ai/badges/dang-verified-light.png"
-                alt="Verified on DANG!"
-                width="260"
-                height="94"
-                loading="lazy"
-              />
-            </picture>
-          </a>
-          <a
-            class="badge-fazier"
-            href="https://fazier.com/launches/hudatech.store"
-            target="_blank"
-            rel="noopener"
-          >
-            <picture>
-              <source
-                srcset="
-                  https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=dark
-                "
-                media="(prefers-color-scheme: dark)"
-              />
-              <img
-                src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light"
-                alt="Launched on Fazier"
-                width="160"
-                loading="lazy"
-              />
-            </picture>
-          </a>
-          <a
-            class="badge-smol"
-            href="https://smollaunch.com"
-            target="_blank"
-            rel="noopener"
-          >
-            <picture>
-              <source
-                srcset="https://smollaunch.com/badges/featured-dark.svg"
-                media="(prefers-color-scheme: dark)"
-              />
-              <img
-                src="https://smollaunch.com/badges/featured.svg"
-                alt="Page to Prompt — Featured on Smol Launch"
-                width="250"
-                height="60"
-                loading="lazy"
-              />
-            </picture>
-          </a>
+          <div class="badges-track">
+            <a href="https://dang.ai" target="_blank" rel="noopener">
+              <picture>
+                <source
+                  srcset="https://assets.dang.ai/badges/dang-verified-dark.png"
+                  media="(prefers-color-scheme: dark)"
+                />
+                <img
+                  src="https://assets.dang.ai/badges/dang-verified-light.png"
+                  alt="Verified on DANG!"
+                  width="260"
+                  height="94"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+            <a
+              class="badge-fazier"
+              href="https://fazier.com/launches/hudatech.store"
+              target="_blank"
+              rel="noopener"
+            >
+              <picture>
+                <source
+                  srcset="
+                    https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=dark
+                  "
+                  media="(prefers-color-scheme: dark)"
+                />
+                <img
+                  src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light"
+                  alt="Launched on Fazier"
+                  width="160"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+            <a
+              class="badge-smol"
+              href="https://smollaunch.com"
+              target="_blank"
+              rel="noopener"
+            >
+              <picture>
+                <source
+                  srcset="https://smollaunch.com/badges/featured-dark.svg"
+                  media="(prefers-color-scheme: dark)"
+                />
+                <img
+                  src="https://smollaunch.com/badges/featured.svg"
+                  alt="Page to Prompt — Featured on Smol Launch"
+                  width="250"
+                  height="60"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+            <a
+              class="badge-nick"
+              href="https://nicklaunches.com/products/page-to-prompt/"
+              target="_blank"
+              rel="noopener"
+            >
+              <picture>
+                <source
+                  srcset="https://nicklaunches.com/badges/featured-dark.png"
+                  media="(prefers-color-scheme: dark)"
+                />
+                <img
+                  src="https://nicklaunches.com/badges/featured.png"
+                  alt="Page to Prompt on Nick Launches"
+                  width="244"
+                  height="56"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </div>
         </div>
       </footer>
     </div>
+    <script>
+      (function () {
+        var box = document.querySelector(".badges");
+        var track = box && box.querySelector(".badges-track");
+        if (!track) return;
+        var originals = Array.prototype.slice.call(track.children);
+        var SPEED = 40; // px / giây
+
+        function build() {
+          var reduce = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches;
+          track.innerHTML = "";
+          box.classList.remove("is-marquee");
+          originals.forEach(function (el) {
+            track.appendChild(el);
+          });
+          if (reduce) return;
+
+          // Lặp nhóm badge cho đến khi rộng hơn khung chứa
+          var group = originals.slice();
+          var groupWidth = track.scrollWidth;
+          while (groupWidth < box.clientWidth && groupWidth > 0) {
+            originals.forEach(function (el) {
+              track.appendChild(el.cloneNode(true));
+            });
+            groupWidth = track.scrollWidth;
+          }
+          // Nhân đôi cả nhóm để vòng lặp liền mạch (translateX -50%)
+          Array.prototype.slice.call(track.children).forEach(function (el) {
+            track.appendChild(el.cloneNode(true));
+          });
+          Array.prototype.slice.call(track.children).forEach(function (el, i) {
+            var isOriginal = originals.indexOf(el) !== -1;
+            if (!isOriginal) {
+              el.setAttribute("aria-hidden", "true");
+              el.setAttribute("tabindex", "-1");
+            }
+          });
+          box.style.setProperty("--badges-duration", groupWidth / SPEED + "s");
+          box.classList.add("is-marquee");
+        }
+
+        build();
+        var t;
+        window.addEventListener("resize", function () {
+          clearTimeout(t);
+          t = setTimeout(build, 200);
+        });
+      })();
+    </script>
   </body>
 </html>
