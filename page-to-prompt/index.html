@@ -484,6 +484,10 @@
       .badges .badge-nick img {
         width: 244px;
       }
+      .badges .badge-sb img {
+        width: auto;
+        height: 55px;
+      }
       @media (max-width: 760px) {
         header {
           flex-direction: column;
@@ -872,6 +876,27 @@
                   alt="Page to Prompt on Nick Launches"
                   width="244"
                   height="56"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+            <a
+              class="badge-sb"
+              href="https://startupbase.io/products/page-to-prompt?utm_source=startupbase&amp;utm_medium=badge&amp;utm_campaign=launch-badge-light"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <picture>
+                <source
+                  srcset="
+                    https://statics.startupbase.io/site/badges/launched-on-sb-dark.svg
+                  "
+                  media="(prefers-color-scheme: dark)"
+                />
+                <img
+                  src="https://statics.startupbase.io/site/badges/launched-on-sb.svg"
+                  alt="Launched on StartupBase"
+                  height="55"
                   loading="lazy"
                 />
               </picture>
