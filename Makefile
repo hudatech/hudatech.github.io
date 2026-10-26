@@ -13,3 +13,7 @@ help: ## Display this help.
 ##@ Development
 w: ## prettier write
 	prettier --write .
+p: ## git push update
+	git add .
+	git commit -m "update"
+	git push origin head
