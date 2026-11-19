@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Page to Prompt – Turn any web page into a ready-to-use AI prompt</title>
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/page-to-prompt/favicon.png" />
     <meta
       name="description"
       content="Page to Prompt is a Chrome extension that sends highlighted text, page content, URL or title to Claude, ChatGPT, Grok, Gemini, Perplexity, Copilot or Qwen with your own saved prompts. $5.99 per month."
@@ -17,18 +17,22 @@
     />
     <script>
       // Set theme before first paint to avoid a light/dark flash.
+      // Saved value is 'light', 'dark' or 'auto' (missing = auto, follow the OS).
       ;(function () {
         try {
           var t = localStorage.getItem('theme')
-          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          if (t !== 'light' && t !== 'dark') {
+            t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          }
           document.documentElement.dataset.theme = t
         } catch (e) {}
       })()
     </script>
-    <script type="module" crossorigin src="/assets/pagetoprompt-ZenzHk96.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/HeroDemo-Z2UxBK40.js">
-    <link rel="stylesheet" crossorigin href="/assets/HeroDemo-BMTKxfwY.css">
-    <link rel="stylesheet" crossorigin href="/assets/pagetoprompt-Cm3nZJ4C.css">
+    <script type="module" crossorigin src="/assets/pagetoprompt-Dv0j0UAF.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/ptp-logo-Cvtbpns6.js">
+    <link rel="modulepreload" crossorigin href="/assets/HeroDemo-DhSP2rJU.js">
+    <link rel="stylesheet" crossorigin href="/assets/HeroDemo-Cco1TIX8.css">
+    <link rel="stylesheet" crossorigin href="/assets/pagetoprompt-DM0UULE3.css">
   </head>
   <body>
     <div id="app"></div>
