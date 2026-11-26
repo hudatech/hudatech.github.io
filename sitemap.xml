@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home (English only) -->
+  <url>
+    <loc>https://hudatech.store/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- https://hudatech.store/page-to-prompt/ (10 languages) -->
+  <url>
+    <loc>https://hudatech.store/page-to-prompt/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/page-to-prompt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/page-to-prompt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/page-to-prompt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/page-to-prompt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/page-to-prompt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/page-to-prompt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/page-to-prompt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/page-to-prompt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/page-to-prompt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/page-to-prompt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/page-to-prompt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/page-to-prompt/?lang=hi</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/page-to-prompt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/page-to-prompt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/page-to-prompt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/page-to-prompt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/page-to-prompt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/page-to-prompt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/page-to-prompt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/page-to-prompt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/page-to-prompt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/page-to-prompt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/page-to-prompt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/page-to-prompt/?lang=ja</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/page-to-prompt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/page-to-prompt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/page-to-prompt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/page-to-prompt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/page-to-prompt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/page-to-prompt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/page-to-prompt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/page-to-prompt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/page-to-prompt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/page-to-prompt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/page-to-prompt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/page-to-prompt/?lang=ko</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/page-to-prompt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/page-to-prompt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/page-to-prompt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/page-to-prompt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/page-to-prompt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/page-to-prompt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/page-to-prompt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/page-to-prompt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/page-to-prompt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/page-to-prompt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/page-to-prompt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/page-to-prompt/?lang=pt-PT</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/page-to-prompt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/page-to-prompt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/page-to-prompt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/page-to-prompt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/page-to-prompt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/page-to-prompt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/page-to-prompt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/page-to-prompt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/page-to-prompt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/page-to-prompt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/page-to-prompt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/page-to-prompt/?lang=ru</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/page-to-prompt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/page-to-prompt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/page-to-prompt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/page-to-prompt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/page-to-prompt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/page-to-prompt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/page-to-prompt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/page-to-prompt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/page-to-prompt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/page-to-prompt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/page-to-prompt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/page-to-prompt/?lang=uk</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/page-to-prompt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/page-to-prompt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/page-to-prompt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/page-to-prompt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/page-to-prompt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/page-to-prompt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/page-to-prompt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/page-to-prompt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/page-to-prompt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/page-to-prompt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/page-to-prompt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/page-to-prompt/?lang=vi</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/page-to-prompt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/page-to-prompt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/page-to-prompt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/page-to-prompt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/page-to-prompt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/page-to-prompt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/page-to-prompt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/page-to-prompt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/page-to-prompt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/page-to-prompt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/page-to-prompt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/page-to-prompt/?lang=zh-CN</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/page-to-prompt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/page-to-prompt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/page-to-prompt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/page-to-prompt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/page-to-prompt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/page-to-prompt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/page-to-prompt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/page-to-prompt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/page-to-prompt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/page-to-prompt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/page-to-prompt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/page-to-prompt/?lang=zh-TW</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/page-to-prompt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/page-to-prompt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/page-to-prompt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/page-to-prompt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/page-to-prompt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/page-to-prompt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/page-to-prompt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/page-to-prompt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/page-to-prompt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/page-to-prompt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/page-to-prompt/" />
+  </url>
+
+  <!-- https://hudatech.store/quick-prompt-for-chatgpt/ (10 languages) -->
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+  </url>
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=vi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+  </url>
+
+  <!-- Single-language pages -->
+  <url>
+    <loc>https://hudatech.store/quick-prompt-for-chatgpt/privacy.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>

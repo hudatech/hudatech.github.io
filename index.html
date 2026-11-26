@@ -1,36 +1,88 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5T3M9C4R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-    </script>
-    <script type="text/javascript">
-      ;(function (c, l, a, r, i, t, y) {
-        c[a] =
-          c[a] ||
-          function () {
-            ;(c[a].q = c[a].q || []).push(arguments)
-          }
-        t = l.createElement(r)
-        t.async = 1
-        t.src = 'https://www.clarity.ms/tag/' + i
-        y = l.getElementsByTagName(r)[0]
-        y.parentNode.insertBefore(t, y)
-      })(window, document, 'clarity', 'script', 'zhx2jwj3us')
-    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HuDaTech – Browser tools for everyday work</title>
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>HuDaTech – AI Browser Extensions for Everyday Work</title>
     <meta
       name="description"
-      content="HuDaTech is an independent maker of browser tools. Our first product, Page to Prompt, is a Chrome extension that turns any web page into a ready-to-use AI prompt."
+      content="HuDaTech makes Chrome extensions that bring AI into your workflow: Page to Prompt and Quick Prompt for ChatGPT. Summarize, rephrase and translate any page."
     />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="HuDaTech" />
+    <link rel="canonical" href="https://hudatech.store/" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HuDaTech" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="HuDaTech – AI Browser Extensions for Everyday Work" />
+    <meta
+      property="og:description"
+      content="Chrome extensions that bring AI into your daily workflow: Page to Prompt and Quick Prompt for ChatGPT."
+    />
+    <meta property="og:url" content="https://hudatech.store/" />
+    <!-- TODO: add a 1200x630 image at public/og.png -->
+    <meta property="og:image" content="https://hudatech.store/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="HuDaTech – AI browser extensions for everyday work" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HuDaTech – AI Browser Extensions for Everyday Work" />
+    <meta
+      name="twitter:description"
+      content="Chrome extensions that bring AI into your daily workflow: Page to Prompt and Quick Prompt for ChatGPT."
+    />
+    <meta name="twitter:image" content="https://hudatech.store/og.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://hudatech.store/#organization",
+            "name": "HuDaTech",
+            "url": "https://hudatech.store/",
+            "logo": "https://hudatech.store/favicon.png",
+            "email": "hudatech.extensions@gmail.com",
+            "slogan": "AI Workflow Tools",
+            "sameAs": ["https://www.youtube.com/@hudatechlab"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://hudatech.store/#website",
+            "url": "https://hudatech.store/",
+            "name": "HuDaTech",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://hudatech.store/#organization" }
+          },
+          {
+            "@type": "ItemList",
+            "name": "HuDaTech Chrome extensions",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "url": "https://hudatech.store/page-to-prompt/",
+                "name": "Page to Prompt"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "url": "https://hudatech.store/quick-prompt-for-chatgpt/",
+                "name": "Quick Prompt for ChatGPT"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,16 +99,89 @@
         } catch (e) {}
       })()
     </script>
-    <script type="module" crossorigin src="/assets/main-C10ofjQP.js"></script>
+
+    <!-- Google Tag Manager -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-5T3M9C4R')
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      ;(function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            ;(c[a].q = c[a].q || []).push(arguments)
+          }
+        t = l.createElement(r)
+        t.async = 1
+        t.src = 'https://www.clarity.ms/tag/' + i
+        y = l.getElementsByTagName(r)[0]
+        y.parentNode.insertBefore(t, y)
+      })(window, document, 'clarity', 'script', 'zhx2jwj3us')
+    </script>
+    <script type="module" crossorigin src="/assets/main-CdHCo45M.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/runtime-dom.esm-bundler-CiTdpNVj.js">
     <link rel="modulepreload" crossorigin href="/assets/plugin-vue:export-helper-BDNMzG2s.js">
     <link rel="modulepreload" crossorigin href="/assets/HeroDemo-Cz7zcbsA.js">
     <link rel="modulepreload" crossorigin href="/assets/ptp-logo-JrA9QEm1.js">
-    <link rel="modulepreload" crossorigin href="/assets/huda-logo-CUUavD3k.js">
+    <link rel="modulepreload" crossorigin href="/assets/huda-logo-Cv0epi0K.js">
     <link rel="stylesheet" crossorigin href="/assets/HeroDemo-Cco1TIX8.css">
-    <link rel="stylesheet" crossorigin href="/assets/main-BrKWr8QL.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-WiK10sOa.css">
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5T3M9C4R"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
+    <div id="app">
+      <!-- Shown before Vue loads (and to crawlers that don't run JavaScript). Replaced when the app mounts. -->
+      <main
+        style="
+          max-width: 760px;
+          margin: 0 auto;
+          padding: 48px 24px;
+          font-family: system-ui, sans-serif;
+          line-height: 1.6;
+        "
+      >
+        <h1>HuDaTech – AI browser extensions for everyday work</h1>
+        <p>
+          HuDaTech is an independent maker of browser tools that bring AI into your daily workflow.
+        </p>
+        <h2><a href="/page-to-prompt/">Page to Prompt</a></h2>
+        <p>
+          Turn any web page into a ready-to-use AI prompt. Send highlighted text, page content, URL
+          or title to ChatGPT, Claude, Gemini, Grok, Perplexity, Copilot or Qwen with your own saved
+          prompts.
+        </p>
+        <h2><a href="/quick-prompt-for-chatgpt/">Quick Prompt for ChatGPT</a></h2>
+        <p>
+          Summarize, rephrase and translate any page with ChatGPT in one shortcut. No copy-paste, no
+          API key.
+        </p>
+        <p>Contact: hudatech.extensions@gmail.com</p>
+      </main>
+    </div>
   </body>
 </html>
