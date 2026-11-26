@@ -1,0 +1,1 @@
+var e=`/assets/huda-logo-B8h6aCQQ.png`;export{e as t};
