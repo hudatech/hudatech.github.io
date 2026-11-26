@@ -8,15 +8,40 @@
       name="description"
       content="Free ChatGPT extension to summarize any website or text, rephrase, paraphrase and translate with one shortcut (Alt+Shift+G). No copy-paste, no API key."
     />
-    <meta
-      name="keywords"
-      content="ChatGPT extension, summarize website, summarize text, AI summarizer, rephrase, paraphrase, translate, make it shorter, AI writing assistant, ChatGPT prompt shortcut"
-    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- Canonical + language versions (canonical & og:url are updated per language by the app) -->
     <link rel="canonical" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
+    <link rel="alternate" hreflang="en" href="https://hudatech.store/quick-prompt-for-chatgpt/" />
     <link
       rel="alternate"
-      hreflang="en"
-      href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=en"
+      hreflang="hi"
+      href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=hi"
+    />
+    <link
+      rel="alternate"
+      hreflang="ja"
+      href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ja"
+    />
+    <link
+      rel="alternate"
+      hreflang="ko"
+      href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ko"
+    />
+    <link
+      rel="alternate"
+      hreflang="pt-PT"
+      href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=pt-PT"
+    />
+    <link
+      rel="alternate"
+      hreflang="ru"
+      href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=ru"
+    />
+    <link
+      rel="alternate"
+      hreflang="uk"
+      href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=uk"
     />
     <link
       rel="alternate"
@@ -25,15 +50,28 @@
     />
     <link
       rel="alternate"
+      hreflang="zh-CN"
+      href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-CN"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-TW"
+      href="https://hudatech.store/quick-prompt-for-chatgpt/?lang=zh-TW"
+    />
+    <link
+      rel="alternate"
       hreflang="x-default"
       href="https://hudatech.store/quick-prompt-for-chatgpt/"
     />
+
     <link rel="icon" type="image/png" href="/quick-prompt-for-chatgpt/favicon.png" />
+    <link rel="apple-touch-icon" href="/quick-prompt-for-chatgpt/favicon.png" />
     <meta name="theme-color" content="#1E2226" />
 
     <!-- Open Graph / social -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="HuDaTech" />
+    <meta property="og:locale" content="en_US" />
     <meta
       property="og:title"
       content="Quick Prompt for ChatGPT – Summarize, Rephrase & Translate Any Page"
@@ -43,9 +81,15 @@
       content="Summarize any website or text, rephrase, paraphrase and translate with ChatGPT in one shortcut."
     />
     <meta property="og:url" content="https://hudatech.store/quick-prompt-for-chatgpt/" />
-    <!-- TODO: add a 1200x630 share image -->
-    <!-- <meta property="og:image" content="https://hudatech.store/quick-prompt-for-chatgpt/og.png" /> -->
+    <meta property="og:image" content="https://hudatech.store/quick-prompt-for-chatgpt/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Quick Prompt for ChatGPT – summarize, rephrase and translate any page with one shortcut"
+    />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://hudatech.store/quick-prompt-for-chatgpt/og.png" />
 
     <script type="application/ld+json">
       {
@@ -54,8 +98,12 @@
         "name": "Quick Prompt for ChatGPT",
         "applicationCategory": "BrowserApplication",
         "operatingSystem": "Chrome",
+        "browserRequirements": "Requires Google Chrome or a Chromium-based browser",
         "description": "Chrome extension to summarize any website or text, rephrase, paraphrase and translate with ChatGPT in one keyboard shortcut.",
         "url": "https://hudatech.store/quick-prompt-for-chatgpt/",
+        "downloadUrl": "https://chromewebstore.google.com/detail/aiecmadoakidllijdohfipmlhjecglib",
+        "installUrl": "https://chromewebstore.google.com/detail/aiecmadoakidllijdohfipmlhjecglib",
+        "image": "https://hudatech.store/quick-prompt-for-chatgpt/og.png",
         "publisher": {
           "@type": "Organization",
           "name": "HuDaTech",
@@ -69,17 +117,67 @@
       }
     </script>
 
-    <!-- Paste the same Google Analytics 4 / Microsoft Clarity snippets used on the main page here -->
-    <script type="module" crossorigin src="/assets/quickprompt-52kVs91g.js"></script>
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5T3M9C4R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      ;(function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            ;(c[a].q = c[a].q || []).push(arguments)
+          }
+        t = l.createElement(r)
+        t.async = 1
+        t.src = 'https://www.clarity.ms/tag/' + i
+        y = l.getElementsByTagName(r)[0]
+        y.parentNode.insertBefore(t, y)
+      })(window, document, 'clarity', 'script', 'zhx2jwj3us')
+    </script>
+    <script type="module" crossorigin src="/assets/quickprompt-BFfjoFq7.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/runtime-dom.esm-bundler-CiTdpNVj.js">
     <link rel="modulepreload" crossorigin href="/assets/huda-logo-CUUavD3k.js">
     <link rel="modulepreload" crossorigin href="/assets/plugin-vue:export-helper-BDNMzG2s.js">
     <link rel="modulepreload" crossorigin href="/assets/vue-i18n-BdgCzPls.js">
-    <link rel="modulepreload" crossorigin href="/assets/SiteFooter-BdEojDLB.js">
+    <link rel="modulepreload" crossorigin href="/assets/SiteFooter-0z7NeXzp.js">
     <link rel="stylesheet" crossorigin href="/assets/SiteFooter-Dk_ZRGwn.css">
-    <link rel="stylesheet" crossorigin href="/assets/quickprompt-CdIwNpy2.css">
+    <link rel="stylesheet" crossorigin href="/assets/quickprompt-trpqBtAD.css">
   </head>
   <body style="margin: 0">
-    <div id="app"></div>
+    <div id="app">
+      <!-- Shown before Vue loads (and to crawlers that don't run JavaScript). Replaced when the app mounts. -->
+      <main
+        style="
+          max-width: 760px;
+          margin: 0 auto;
+          padding: 48px 24px;
+          font-family: system-ui, sans-serif;
+          line-height: 1.6;
+        "
+      >
+        <h1>
+          Quick Prompt for ChatGPT – Summarize, rephrase &amp; translate any page with ChatGPT
+        </h1>
+        <p>
+          Select text or use the whole page, press Alt+Shift+G, pick a prompt. Quick Prompt opens
+          ChatGPT with everything filled in. Summarize websites and text, rephrase, paraphrase,
+          translate, make it shorter and fix grammar. No copy-paste, no API key. Free plan with 10
+          sends per day; Pro from $6/month.
+        </p>
+        <p>
+          <a href="https://chromewebstore.google.com/detail/aiecmadoakidllijdohfipmlhjecglib"
+            >Add Quick Prompt for ChatGPT to Chrome</a
+          >
+          · <a href="/quick-prompt-for-chatgpt/privacy.html">Privacy policy</a>
+        </p>
+      </main>
+    </div>
   </body>
 </html>
